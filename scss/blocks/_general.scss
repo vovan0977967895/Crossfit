@@ -2,12 +2,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: var(--color-dark-alternate);
     column-gap: 20px;
+    padding-inline: 32px;
     &-logo{
         flex-shrink: 0;
     }
     &-menu-list{
         display: flex;
+        flex-wrap: wrap;
         column-gap: 50px;
     }
     &-menu-link {
@@ -26,7 +29,7 @@
     &-menu-link.is-current::after{
         content: '';
         width: 5px;
-        height: 5px;
+        aspect-ratio: 1;
         background-color: currentColor;
         border-radius: 50%;
     }
@@ -37,13 +40,25 @@
     }
     &-burger-button{
       display: inline-flex;
+      flex-direction: column;
       justify-content: center;
-      align-items: center;
-      border: 5px solid #fff;
-      border-radius: var(--border-radius);  
+      row-gap: 4px;
+      padding-left: 8px;
+      border: var(--border);
+      border-radius: 50%;
+      color: var(--color-light);  
       width: 40px;
-      height: 40px;
-      background-color: var();
-
+      aspect-ratio: 1;
+      background-color: transparent;
+      &:hover{
+        color: var(--color-light-grey);
+        border-color: currentColor;
+      }
+      &-line{
+        width: 6px;
+        height: 1px;
+        background-color: currentColor;
+        box-shadow: 16px 0px 0px 0px currentColor;
+      }
     }
 }

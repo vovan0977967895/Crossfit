@@ -1,11 +1,12 @@
 :root{
     --color-dark: #000000;
+    --color-dark-alternate: #131619;
     --color-light: #ffffff;
     --color-dark-grey: #404040;
     --color-light-grey: #c4c4c4;
 
     --border-radius: 30px;
-    --border: 1px solid var(--color-ligh);
+    --border: 1px solid var(--color-light);
 
     --font-famaly-base: 'Heebo', sans-serif;
     --font-famaly-assent: 'Yantramanav', sans-serif;
@@ -34,7 +35,7 @@ svg * {
     transition-duration: var(--transition-duration);
 }
 a{
-    color: var(--color-ligh);    
+    color: var(--color-light);    
 }
 a:hover{
     color: var(--color-light-grey);
@@ -53,7 +54,7 @@ h1, h2, h3, h4, h5, h6{
 .button{
     display: inline-flex;
     height: 38px;
-    width: 134px;
+    max-width: 134px;
     align-items: center;
     padding-inline: 26px;
     border-radius: 30px;
@@ -69,3 +70,15 @@ h1, h2, h3, h4, h5, h6{
         background-color: var(--color-light-grey);
     }
 }
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+  }
