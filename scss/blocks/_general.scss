@@ -1,0 +1,49 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+    &-logo{
+        flex-shrink: 0;
+    }
+    &-menu-list{
+        display: flex;
+        column-gap: 50px;
+    }
+    &-menu-link {
+        display: inline-flex;
+        align-items: center;
+        height: 90px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: var(--color-ligh);
+        font-size: 12px;
+        line-height: 1.5;
+        font-weight: 700;
+        letter-spacing: 1.2px; 
+        column-gap: 7px;       
+    }
+    &-menu-link.is-current::after{
+        content: '';
+        width: 5px;
+        height: 5px;
+        background-color: currentColor;
+        border-radius: 50%;
+    }
+    &-action{
+        display: flex;
+        align-items: center;
+        column-gap: 40px;
+    }
+    &-burger-button{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border: 5px solid #fff;
+      border-radius: var(--border-radius);  
+      width: 40px;
+      height: 40px;
+      background-color: var();
+
+    }
+}

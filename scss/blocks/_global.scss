@@ -26,6 +26,19 @@ body{
     line-height: 1.75;
     background-color: var(--color-dark);
 }
+a,
+button,
+input,
+textarea,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+a{
+    color: var(--color-ligh);    
+}
+a:hover{
+    color: var(--color-light-grey);
+}
 
 .container{
     max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
@@ -36,4 +49,23 @@ body{
 h1, h2, h3, h4, h5, h6{
     font-weight: 700;
     text-transform: uppercase;
+}
+.button{
+    display: inline-flex;
+    height: 38px;
+    width: 134px;
+    align-items: center;
+    padding-inline: 26px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    background-color: var(--color-light);
+    border: none;
+    white-space: nowrap;
+    &:hover{
+        background-color: var(--color-light-grey);
+    }
 }
