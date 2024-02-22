@@ -208,6 +208,97 @@ h1, h2, h3, h4, h5, h6 {
           box-shadow: 16px 0px 0px 0px currentColor;
 }
 
+.banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  min-height: 985px;
+  padding: 36px 70px;
+  color: var(--color-light);
+  background-color: var(--color-dark-alternate);
+}
+.banner-body {
+  text-transform: uppercase;
+}
+.banner-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.27;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.banner-info::before {
+  content: "";
+  width: 194px;
+  aspect-ratio: 1;
+  background: url(/images/icon-arrow.svg) center/contain no-repeat;
+  margin-right: 30px;
+}
+.banner-title {
+  font-size: 360px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.banner-pagination-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.banner-pagination-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.banner-pagination-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 7px;
+  background-color: transparent;
+  border: none;
+}
+.banner-pagination-button::after {
+  content: "";
+  width: 10px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 0px;
+  border: var(--border);
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+}
+.banner-pagination-button:not(.is-current):hover::after {
+  border-color: var(--color-light-grey);
+}
+.banner-pagination-button.is-current::after {
+  background-color: var(--color-light);
+}
+
 @media (max-width: 1024px) {
   .header {
     -ms-flex-wrap: wrap;
