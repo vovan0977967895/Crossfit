@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    min-height: var(--header-height);
     background-color: var(--color-dark-alternate);
     column-gap: 20px;
     padding-inline: 32px;
@@ -16,7 +17,7 @@
     &-menu-link {
         display: inline-flex;
         align-items: center;
-        height: 90px;
+        height: var(--header-height);
         text-decoration: none;
         text-transform: uppercase;
         color: var(--color-light);
@@ -66,7 +67,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    min-height: 985px;
+    min-height: calc(100vh - var(--header-height));
     padding: 36px 70px;
     color: var(--color-light);
     background-color: var(--color-dark-alternate);
@@ -77,21 +78,20 @@
         display: flex;
         align-items: flex-end;
         color: rgb(255, 255, 255);
-        font-size: 30px;
+        font-size: clamp(16px, 1.56vw, 30px) ;
         font-weight: 700;
         line-height: 1.27;
-        letter-spacing: 0%;
         text-align: left;
         &::before{
             content: '';
-            width: 194px;
+            width: clamp(60px, 10.1vw, 194px);
             aspect-ratio: 1;
             background: url(../images/icon-arrow.svg) center/contain no-repeat;
             margin-right: 30px;
         }
     } 
     &-title{        
-        font-size: 360px;
+        font-size: min(18.75vw, 360px);
         font-weight: 700;
         line-height: 1;
         letter-spacing: 0%;
@@ -128,8 +128,66 @@
         }
         &-button.is-current::after{
            background-color: var(--color-light);
-        }
-        
-
+        }      
     }
+}
+.motivation{
+  &-card{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    column-gap: clamp(30px, 10.73vw, 206px );
+    &-image{
+      margin-block: -60px;
+    }
+    &-body{
+      padding-left: 35px;
+    }
+    &-description{
+      min-width: 400px;
+      &:not(:last-child){
+        margin-bottom: 37px;
+      }
+    }
+    &-title{
+      &:not(:last-child){
+        margin-bottom: 14px;
+      }
+    }
+
+    
+  }
+  &-item{
+    &:nth-child(even){
+      background-color: var(--color-dark-alternate);
+    }
+    &:nth-child(even) .motivation-card{
+      flex-direction: row-reverse;
+    }
+  }
+  .backdrop-title{
+    position: relative;
+    z-index: 2;
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 26px;
+      aspect-ratio: 1;
+      right: calc(100% + 8px);
+      margin-top: 3px;
+      background: url(../images/icon-plus.svg) center/cover no-repeat;
+    }
+    &::after{
+      position: absolute;
+      z-index: -1;
+      top: -0.45em;
+      left: -0.65em;
+      content: attr(data-title);
+      color: transparent;
+      -webkit-text-stroke: 1px var(--color-light-grey);
+      font-size: 2.8em;
+      font-family: var(--font-family-assent);
+    }
+  }
 }
