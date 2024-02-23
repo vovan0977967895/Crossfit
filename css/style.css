@@ -245,7 +245,7 @@ h1, h2, h3, h4, h5, h6 {
   content: "";
   width: 194px;
   aspect-ratio: 1;
-  background: url(/images/icon-arrow.svg) center/contain no-repeat;
+  background: url(../images/icon-arrow.svg) center/contain no-repeat;
   margin-right: 30px;
 }
 .banner-title {
