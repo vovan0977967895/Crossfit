@@ -1,3 +1,13 @@
+@media (max-width:1919px){
+   .motivation{
+     &-card{
+      &-image{
+         margin-block: -20px;
+      }
+     } 
+   }
+}
+
 @media (max-width:1024px){
    .header{
       flex-wrap: wrap;
@@ -20,6 +30,16 @@
       row-gap: 10px;
 
    }
+   .motivation{
+      &-card{
+         padding-block: 50px;
+       &-image{
+          max-width: 30%;
+          height: auto;
+          margin-block: 0px;
+       }
+      } 
+    }
 }
 @media (max-width:767px){
    .header{
@@ -46,4 +66,27 @@
          }
       }
    }
+   .motivation{
+      &-card{
+         flex-direction: column-reverse;
+         padding-block: 30px;
+         row-gap: 30px;
+         &-image{
+            max-width: 85%; 
+         }
+         &-description{
+            min-width: 290px;
+            padding-right: 10px;
+            &:not(:last-child){
+               margin-bottom: 20px;
+             }
+         }
+      }
+      &-item{
+         &:nth-child(even) .motivation-card{
+            flex-direction: column-reverse;
+
+          }
+       }
+    }
 }

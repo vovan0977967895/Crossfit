@@ -144,7 +144,7 @@ p:not([class]):not(:last-child) {
 }
 
 .title-medium {
-  font-size: 40px;
+  font-size: clamp(20px, 2.08vw, 40px);
   font-weight: 700;
   line-height: 1.3;
   text-transform: uppercase;
@@ -359,7 +359,7 @@ p:not([class]):not(:last-child) {
   margin-block: -60px;
 }
 .motivation-card-body {
-  padding-left: 35px;
+  padding-left: 65px;
 }
 .motivation-card-description {
   min-width: 400px;
@@ -405,6 +405,11 @@ p:not([class]):not(:last-child) {
   font-family: var(--font-family-assent);
 }
 
+@media (max-width: 1919px) {
+  .motivation-card-image {
+    margin-block: -20px;
+  }
+}
 @media (max-width: 1024px) {
   .header {
     -ms-flex-wrap: wrap;
@@ -431,6 +436,14 @@ p:not([class]):not(:last-child) {
   .banner {
     padding-inline: 15px;
     row-gap: 10px;
+  }
+  .motivation-card {
+    padding-block: 50px;
+  }
+  .motivation-card-image {
+    max-width: 30%;
+    height: auto;
+    margin-block: 0px;
   }
 }
 @media (max-width: 767px) {
@@ -459,5 +472,29 @@ p:not([class]):not(:last-child) {
   }
   .banner-info::before {
     margin-right: 10px;
+  }
+  .motivation-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding-block: 30px;
+    row-gap: 30px;
+  }
+  .motivation-card-image {
+    max-width: 85%;
+  }
+  .motivation-card-description {
+    min-width: 290px;
+    padding-right: 10px;
+  }
+  .motivation-card-description:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .motivation-item:nth-child(even) .motivation-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }/*# sourceMappingURL=style.css.map */

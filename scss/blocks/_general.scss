@@ -141,7 +141,7 @@
       margin-block: -60px;
     }
     &-body{
-      padding-left: 35px;
+      padding-left: 65px;
     }
     &-description{
       min-width: 400px;
@@ -153,9 +153,7 @@
       &:not(:last-child){
         margin-bottom: 14px;
       }
-    }
-
-    
+    }    
   }
   &-item{
     &:nth-child(even){
@@ -183,7 +181,7 @@
       z-index: -1;
       top: -0.45em;
       left: -0.65em;
-      content: attr(data-title);
+      content: attr(data-title);      
       color: transparent;
       -webkit-text-stroke: 1px var(--color-light-grey);
       font-size: 2.8em;
