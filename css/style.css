@@ -70,6 +70,7 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   text-transform: uppercase;
+  color: var(--color-light);
 }
 
 p {
@@ -405,9 +406,47 @@ p:not([class]):not(:last-child) {
   font-family: var(--font-family-assent);
 }
 
+.training-types {
+  max-width: 1920px;
+  margin-inline: auto;
+  position: relative;
+  background-color: var(--color-dark);
+  padding-top: 70px;
+  padding-bottom: 120px;
+}
+.training-types-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 60px;
+}
+.training-types-item {
+  --trainingTypesIconSize: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 32px;
+  padding-top: var(--trainingTypesIconSize);
+  background: url(../images/training-types/Vector-arrow.svg) 100% 0/var(--trainingTypesIconSize) no-repeat;
+}
+.training-types-item-title {
+  color: var(--color-light);
+}
+
 @media (max-width: 1919px) {
   .motivation-card-image {
     margin-block: -20px;
+  }
+}
+@media (max-width: 1280px) {
+  .training-types-list {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 1024px) {
@@ -496,5 +535,19 @@ p:not([class]):not(:last-child) {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+  }
+  .training-types-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .training-types-item {
+    --trainingTypesIconSize: 50px;
+    row-gap: 10px;
+  }
+  .training-types-item-title {
+    text-align: center;
+  }
+  .training-types-image {
+    max-width: 120px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -189,3 +189,28 @@
     }
   }
 }
+.training-types{
+    max-width: 1920px;
+    margin-inline: auto;
+    position: relative;
+    background-color: var(--color-dark);
+    padding-top: 70px;
+    padding-bottom: 120px;
+    &-list{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 60px;
+    }
+    &-item{
+        --trainingTypesIconSize: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 32px;
+        padding-top: var(--trainingTypesIconSize);
+        background: url(../images/training-types/Vector-arrow.svg) 100% 0/var(--trainingTypesIconSize) no-repeat;
+        &-title{
+            color: var(--color-light);
+        }
+    }
+}
