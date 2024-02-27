@@ -163,31 +163,7 @@
       flex-direction: row-reverse;
     }
   }
-  .backdrop-title{
-    position: relative;
-    z-index: 2;
-    &::before{
-      content: '';
-      display: block;
-      position: absolute;
-      width: 26px;
-      aspect-ratio: 1;
-      right: calc(100% + 8px);
-      margin-top: 3px;
-      background: url(../images/icon-plus.svg) center/cover no-repeat;
-    }
-    &::after{
-      position: absolute;
-      z-index: -1;
-      top: -0.45em;
-      left: -0.65em;
-      content: attr(data-title);      
-      color: transparent;
-      -webkit-text-stroke: 1px var(--color-light-grey);
-      font-size: 2.8em;
-      font-family: var(--font-family-assent);
-    }
-  }
+  
 }
 .training-types{
     max-width: 1920px;
@@ -213,4 +189,73 @@
             color: var(--color-light);
         }
     }
+}
+.backdrop-title{
+  position: relative;
+  z-index: 2;
+  &::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 26px;
+    aspect-ratio: 1;
+    right: calc(100% + 8px);
+    margin-top: 3px;
+    background: url(../images/icon-plus.svg) center/cover no-repeat;
+  }
+  &::after{
+    position: absolute;
+    z-index: -1;
+    top: -0.45em;
+    left: -0.65em;
+    content: attr(data-title);      
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-light-grey);
+    font-size: 2.8em;
+    font-family: var(--font-family-assent);
+  }
+}
+.join-us{
+  &-video-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 30px;
+    background: url(../images/join-us-bg.jpeg) center center/cover no-repeat var(--color-dark-alternate);
+  }
+  &-video-play-button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: 	center ;
+    width: 200px;
+    aspect-ratio: 1;
+    border: var(--border);
+    border-radius: 50%;
+    background-color: transparent;
+    column-gap: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-light);
+    &:hover{
+      color: var(--color-dark);
+      background: var(--color-light-grey);
+    }
+    &::after{
+      content: '';
+      width: 26px;
+      aspect-ratio: 1;
+      background: url(../images/join-us-arrow-45deg.svg) center/contain no-repeat;
+      color: var(--color-light);
+      transition-duration: var(--transition-duration);
+    }
+    &:hover::after{
+      filter: invert(1); //инвертируем цвет иконки стрелки
+    }
+  }
 }
