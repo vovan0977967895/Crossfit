@@ -49,6 +49,11 @@
       } 
     }
 }
+.join-us{
+   &-body{
+      padding-bottom: 80px;
+   }
+}
 @media (max-width:767px){
    .header{
       padding-inline: 10px;

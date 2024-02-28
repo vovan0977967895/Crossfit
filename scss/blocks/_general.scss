@@ -224,6 +224,58 @@
     padding: 150px 30px;
     background: url(../images/join-us-bg.jpeg) center center/cover no-repeat var(--color-dark-alternate);
   }
+  &-video{ 
+    width: 100%; //прописываем три значения для адаптации видео картинки
+    max-width: 960px;
+    height: auto;
+  }
+  &-title{
+    position: relative;
+    font-size: clamp(64px, 9.37vw, 180px);
+    margin-top: -0.5em;
+    line-height: 1;
+    text-align: center;
+    &:not(:last-child){
+      margin-bottom: 130px;
+    }
+    &::after{
+      content: '';
+      display: inline-block;
+      width: 0.71em;
+      aspect-ratio: 1;
+      background: url(/images/icon-arrow.svg) center/contain no-repeat;
+      scale: 1 -1; //повертаемо стрілку вверх
+      margin-left: 0.14em;
+    }
+  }  
+  &--form-subtitle{
+    color: var(--color-light);
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.65;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &-form-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 7px;
+    &:not(:last-child){
+      margin-bottom: 52px;
+    }
+  }
+  &-form-body{
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+  }
+  &-form-input{
+    max-width: 400px;
+  }
+  &-body{
+    padding-bottom: 150px;
+  }
   &-video-play-button{
     position: absolute;
     top: 50%;
@@ -232,7 +284,8 @@
     display: inline-flex;
     justify-content: center;
     align-items: 	center ;
-    width: 200px;
+    width: clamp(70px, 20.83vw, 200px);
+    // width: 200px;
     aspect-ratio: 1;
     border: var(--border);
     border-radius: 50%;
@@ -259,3 +312,4 @@
     }
   }
 }
+
