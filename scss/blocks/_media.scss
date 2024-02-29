@@ -48,11 +48,16 @@
        }
       } 
     }
-}
-.join-us{
-   &-body{
-      padding-bottom: 80px;
-   }
+    .join-us{
+       &-body{
+          padding-bottom: 80px;
+       }
+       
+    }
+    .location{
+      display: flex;
+      flex-direction: column-reverse;
+    } 
 }
 @media (max-width:767px){
    .header{
@@ -116,6 +121,28 @@
       }
       &-image{
          max-width: 120px;
+      }
+   }
+   .join-us{
+      &-form-body{
+         flex-wrap: wrap;
+         row-gap: 20px;
+      }
+      &-form-form-header{
+         align-items: center;
+      }
+      &-form-subtitle{
+         font-size: 16px;
+      }
+   }
+   .location{
+      &-body{
+         padding-block: 40px;
+      }
+      &-description{
+         &:not(:last-child){
+            padding-bottom: 20px;
+         }
       }
    }
 }
