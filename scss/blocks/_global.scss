@@ -160,3 +160,11 @@ p:not([class]):not(:last-child){
     max-width: 1920px;
     margin-inline: auto;
   }
+  .section-description{
+    color: var(--color-light);
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.65;
+    text-align: center;
+    text-transform: uppercase;
+  }
