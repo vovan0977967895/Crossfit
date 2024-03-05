@@ -83,6 +83,21 @@
          padding-top: 10px;
       }      
     }
+    .footer{
+      &-main{
+         padding-top: 80px;
+         padding-bottom: 60px;
+      }
+      &-body{
+         grid-template-columns: repeat(2, 1fr);
+         row-gap: 30px;
+      }
+      &-header{
+         display: flex;
+         flex-direction: column;
+         row-gap: 30px;
+      }
+    }
     
     
 }
@@ -194,5 +209,20 @@
       &-table-wrapper::before{
          display: none;
       }
-    } 
+    }
+    .footer{
+      &-main{
+         padding-top: 50px;
+         padding-bottom: 40px;
+      }
+      &-body{
+         grid-template-columns: repeat(1, 1fr);
+         row-gap: 30px;
+      }
+      &-header{
+         display: flex;
+         flex-direction: column;
+         row-gap: 30px;
+      }
+    }     
 }
